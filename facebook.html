@@ -1,0 +1,193 @@
+<!-- 초기에 클래스와 아이디를 주게 되면 같은 속성이여도 다른 아이디를 줘야 되는 줄 알았는데
+후반 거의 다 만들었을 때 코드가 너무 길게 나와 이게 맞는 건가 의심되고 걱정되서 찾아보니
+같은 속성을 줄 때 같은 아이디, 클래스를 줘도 된다는 것을 알게되고 충격과 공포를 받은 후 
+수정 하니 200줄이 줄어듬. naming 하는 법을 자세하게 배우고 싶음.만족 최선을 다한 것에 대한 박수 -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Facebook</title>
+    <link rel="stylesheet" href="./facebook.css">
+</head>
+<body>
+    <!-- 게시물 작성하기 누르면 나오는 창 만들기 -->
+     <div id="modal">
+        <div id="modal_main">
+            <div id="modal_top">
+                게시물 만들기
+            </div>
+            <div id="modal_center">
+                <img  src="./profile2.png" >
+                <div id="modal_name">
+                    <span>은빈</span>
+                    <div id="friend">
+                        <img src="./friend.png">
+                        <span>친구의 친구</span>
+                        <img src="./more.png" alt="">
+                    </div>
+                </div>
+            </div>
+            <!-- 작성하는 곳  -->
+            <textarea id="modal_feed" placeholder="은빈님, 무슨 생각을 하고 계신가요?"></textarea>
+            <p id="text"></p>
+            <!-- 사진, 이미지  -->
+           <div id="modal_bottom">
+                <div id="modal_icon">
+                    <img src="./modal-icon-color.png" alt="">
+                    <img src="./modal-icon-happy.png" alt="">
+                </div>
+                <div id="modal_plus">
+                    <span>게시물에 추가</span>
+                    <div id="modal_plus-right">
+                        <div id="modal_plus-icon">
+                            <img src="./modal-video.png">
+                        </div>
+                        <div id="modal_plus-icon">
+                            <img src="./modal-photo.png" alt="">
+                        </div>
+                        <div id="modal_plus-icon">
+                            <img src="./modal-tage.png" alt="">
+                        </div>
+                        <div id="modal_plus-icon">
+                            <img src="./which.png" alt="">
+                        </div>
+                        <div id="modal_plus-icon">
+                            <img src="./modal-smile.png" alt="" style="width: 25px;">
+                        </div>
+                        <div id="modal_plus-icon">
+                            <img src="./modal-icon-more.png" alt="" style="width: 20px;">
+                        </div>
+                    </div>
+                </div>
+                <div id="modal_make">
+                    <span>게시</span>
+
+                </div>
+            </div>
+        </div>
+    </div> 
+    <!-- 상단 헤더 만들기 -->
+    <header class="header">
+        <!-- 오른쪽 로고, 검색창 -->
+        <div class="left">
+            <img id="logo" src="./logo.png" >
+            <div class="inputimg">
+                <img id="ehe" src="./ehe1.png" alt="">
+                <input class="inputWrap" type="text"  placeholder="Facebook 검색" >
+            </div>
+        </div>
+        <!-- 중심  -->
+        <div class="center">
+            <div class="center-head">
+                <img class="center-img" src="./home.png" >
+            </div>
+            <div class="center-head">
+                <img class="center-img" src="./video.png">
+            </div>
+            <div class="center-head">
+                <img class="center-img" src="./friend.png">
+            </div>
+            <div class="center-head">
+                <img class="center-img" src="./block.png" >
+            </div>
+        </div>
+        <!-- 왼쪽 프로필, 페메, 알림, 더보기 창 이동 -->
+        <div class="right">
+            <div class="profile">
+                <img class="profile" src="./main-profile.png" >
+                <sapn id="name">은빈</sapn>
+            </div>
+            <div class="right-head">
+                <img class="right-img" src="./plus.png" >
+            </div>
+            <div class="right-head">
+                <img class="right-img" src="./messenger.png">
+            </div>
+            <div class="right-head">
+                <img class="right-img" src="./alram.png">
+            </div>
+            <div class="right-head">
+                <img class="right-img" src="./more.png">
+            </div>
+        </div>
+    </header>
+    <!-- 피드 뜨는 곳 -->
+    <section class="main"> 
+        <!-- 왼쪽 고정 바 -->
+        <div class="mainleft">
+            <div class="main-left">
+                <img id="main-profile" src="./main-profile.png">&nbsp;&nbsp;은빈
+            </div>
+            <!-- 클래스 main-left 다 같은 속성이여서 같은 class 줌 -->
+            <div class="main-left">
+                <img src="./corona.png">&nbsp;&nbsp;코로나19 정보 센터
+            </div>
+            <div class="main-left">
+                <img src="./main-friend.png">&nbsp;&nbsp;친구
+            </div>
+            <div class="main-left">
+                <img  src="main-messenger.png">&nbsp;&nbsp;Messenger
+            </div>
+            <div class="main-left">
+                <img  src="./page.png">&nbsp;&nbsp;페이지
+            </div>
+            <div class="main-left">
+                <img src="event.png">&nbsp;&nbsp;이벤트
+            </div>
+            <div class="main-left">
+                <img  src="./main-movie.png">&nbsp;&nbsp;동영상
+            </div>
+            <div class="main-left">
+                <img  src="./gibu.png" alt="">&nbsp;&nbsp;기부 캠페인
+            </div>
+            <div class="main-left">
+                <img  src="./group.png" alt="">&nbsp;&nbsp;그룹
+            </div>
+            <div class="main-left">
+                <img id="main-img" src="./main-plus.png"> &nbsp;&nbsp;더보기
+            </div>
+            <!-- 밑줄 ?? -->
+            <hr class="bor">
+            <footer class="footer">
+                <div class="footer_name">
+                    <span>개인정보처리방침 ♥</span>
+                    <span>약관</span>
+                    <span>정보</span>
+                    <span>AdChoices</span>
+                    <span>쿠키</span>
+                    <span>더보기</span>
+                    <span>Facebook 2020</span>
+                </div>
+            </footer>
+        </div>
+        <!-- 피드 뜨는 공간 js 모르겠음 -->
+        <div class="main_center">
+            <div class="bar">
+                <div class="bar-top">
+                    <img src="./profile2.png">
+                    <button class="think">
+                        은빈님, 무슨 생각을 하고 계신가요?
+                    </button>
+                </div>
+                <hr class="bor">
+            <div class="bar-bottom">
+                    <button class="bor-img">
+                        <img src="./video(2).png">
+                        라이브 방송
+                    </button>
+                    <button class="bor-img">
+                        <img src="./photo.png">
+                        사진/동영상
+                    </button>
+                    <button class="bor-img">
+                        <img src="./feeling.png">
+                        기분/활동
+                    </button>
+                </div>
+            </div>
+        </div>
+    </section>
+</body>
+</html>
