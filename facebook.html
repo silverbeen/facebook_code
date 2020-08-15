@@ -10,6 +10,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Facebook</title>
     <link rel="stylesheet" href="./facebook.css">
+    <link rel="stylesheet" href="./reset.css">
 </head>
 <body>
     <!-- 게시물 작성하기 누르면 나오는 창 만들기 -->
@@ -67,7 +68,6 @@
                 </div>
                 <div id="modal_make">
                     <div id="modal_line">게시</div>
-
                 </div>
             </div>
         </div>
@@ -167,7 +167,7 @@
             </footer>
         </div>
         <!-- 피드 뜨는 공간 js 모르겠음 -->
-        <div class="main_center">
+        <div id="main_center">
             <div class="bar">
                 <div class="bar-top">
                     <img src="./profile2.png">
@@ -182,23 +182,15 @@
                         라이브 방송
                     </button>
                     <button class="bor-img">
-                        <img src="./photo.png">
+                        <img src="./modal-photo.png">
                         사진/동영상
                     </button>
                     <button class="bor-img">
-                        <img src="./feeling.png">
+                        <img src="./modal-smile.png">
                         기분/활동
                     </button>
                 </div>
             </div>
-            <li>
-                <div id="main_feed">
-                    <div id="main_feed-top">
-                        <img src="./main-profile.png" alt="">
-                        #
-                    </div>
-                </div>
-            </li>
         </div>
     </section>
     <script src="./facebook.js"></script>
