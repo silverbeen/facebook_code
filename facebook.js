@@ -3,7 +3,6 @@ const face={
     add:document.getElementById("modal_make"),
     list: document.getElementById("main_feed"),
     have:document.getElementById("main_center"),
-
 };
 let openmodal = document.getElementById("openmodal");
 
@@ -13,13 +12,17 @@ openmodal.addEventListener("click",()=> {
 });
 
 
+function reset() {
+    modal.style.display="none";
+    str = null;
+}
 
 face.add.addEventListener("click",() => {
 
     var str = document.getElementById("modal_feed").value;
     str = str.replace(/(?:\r\n|\r|\n)/g, '<br />');
 
-    const faceTemplate = `<div>${str}</div>`;
+    //const faceTemplate = `<div>${str}</div>`;
 
     const listTemplate=`<li id="main_feed">
     <div id="main_feed-top">
@@ -52,7 +55,9 @@ face.add.addEventListener("click",() => {
 
 
 face.have.insertAdjacentHTML("beforeend", listTemplate);
-    
+
+reset();
+
 });
 
 let Delate=document.getElementById("modal_img");
